@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Thông Tin Dịch Vụ Công Đà Nẵng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class=" text-white text-center py-2" style="background-color: #007ba7;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="../img/logo/logo1.png" alt="Logo" height="150" width="170">
+            <div class="d-none d-md-block marquee-container">
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <strong>Sứ mệnh:</strong> Thay mặt chính quyền chăm sóc công dân, doanh nghiệp.
+                        &nbsp;&nbsp;&nbsp;
+                        <strong>Tầm nhìn:</strong> Tham gia có hiệu quả vào chương trình xây dựng chính quyền điện tử và
+                        chương trình cải cách hành chính thành phố Đà Nẵng. &nbsp;&nbsp;&nbsp;
+                        <strong>Sứ mệnh:</strong> Thay mặt chính quyền chăm sóc công dân, doanh nghiệp.
+                        &nbsp;&nbsp;&nbsp;
+                        <strong>Tầm nhìn:</strong> Tham gia có hiệu quả vào chương trình xây dựng chính quyền điện tử và
+                        chương trình cải cách hành chính thành phố Đà Nẵng.
+                    </div>
+                </div>
+            </div>
+            <div class="user-icon">
+                <img src="../img/avt.png" alt="User" height="40" width="40">
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <div class="container-fluid hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-md-6 d-flex justify-content-center">
+                    <div class="image-container">
+                        <img src="../img/banner/banner2.jpg" alt="Hình 1">
+                        <img src="../img/banner/cauvang.jpg" alt="Hình 2">
+                        <img src="../img/banner/banner3.jpg" alt="Hình 3">
+                        <img src="../img/banner/banner4.jpg" alt="Hình 4">
+                    </div>
+                </div> -->
+                <div class="col-md-6 content">
+                    <div class="d-flex justify-content-center">
+                        <img src="../img/logo/logo1.png" alt="Logo" height="400" width="400">
+                    </div>
+                    <p>CỔNG THÔNG TIN DỊCH VỤ CÔNG</p>
+                    <p style="-webkit-text-stroke: 0.5px white; font-size: 50px; color: #007ba7; font-weight: bold;">ĐÀ
+                        NẴNG</p>
+                    <p>
+                    <p><i class="fa-solid fa-phone-volume fa-shake fa-lg" style="color: red;"></i> *1022 hoặc 0236.1022
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dịch vụ -->
+    <div class="container my-5">
+        <div class="row gy-5">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="../img/ctt.png" class="card-img-top" alt="Logo 1">
+                    <div class="card-body">
+                        <h5 class="card-title ">Cổng Thông Tin Dịch Vụ Công</h5>
+                        <p class="card-text">Thông tin quan trọng dành cho công dân.</p>
+                        <button class="btn btn-primary btn-truy-cap mt-3">Truy cập</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="../img/cgy.png" class="card-img-top" alt="Logo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cổng Góp Ý Thành Phố</h5>
+                        <p class="card-text">Gửi phản hồi và ý kiến đóng góp.</p>
+                        <button class="btn btn-success btn-truy-cap mt-3">Truy cập</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="../img/cq.png" class="card-img-top" alt="Logo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hệ Thống Chính Quyền Điện Tử</h5>
+                        <p class="card-text">Cập nhật chính sách mới nhất.</p>
+                        <button class="btn btn-truy-cap custom-orange mt-3">Truy cập</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tin tức -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">TIN TỨC MỚI NHẤT</h2>
+
+            <div class="relative">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="news-container">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination mt-4"></div>
+        </div>
+    </section>
+
+    <!-- chatbox -->
+    <img id="chatIcon" class="chat-icon" src="https://cdn-icons-png.flaticon.com/512/5948/5948551.png" alt="Chat Icon">
+
+    <div id="chatBox" class="chat-box hidden">
+        <div class="chat-header">
+            Xin chào! Tôi có thể giúp gì?
+            <span id="closeChat" class="close-btn">&times;</span>
+        </div>
+        <div class="chat-messages" id="messages"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+            <button id="sendBtn">Gửi</button>
+        </div>
+    </div>
+    <div>
+        <button id="callBtn" class="call-btn" onclick="makeCall()"><i class="fa fa-phone"></i></button>
+    </div>
+    <div>
+        <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
