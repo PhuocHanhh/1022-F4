@@ -67,10 +67,10 @@ footer {
     color: white;
 }
 @keyframes backgroundSlide {
-    0% { background-image: url('../img/banner/banner5.jpg'); }
-    33% { background-image: url('../img/banner/background.jpg'); }
-    66% { background-image: url('../img/banner/banner6.jpg'); }
-    100% { background-image: url('../img/banner/banner7.jpg'); }
+    0% { background-image: url('img/banner/banner5.jpg'); }
+    33% { background-image: url('img/banner/background.jpg'); }
+    66% { background-image: url('img/banner/banner6.jpg'); }
+    100% { background-image: url('img/banner/banner7.jpg'); }
 }
 /* Tạo nền với hiệu ứng mờ */
 .hero-section {
