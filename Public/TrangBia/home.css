@@ -1,0 +1,1031 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.logo {
+    width: 200px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #ffffff; 
+    color: #007ba7;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background: #007ba7;
+}
+
+.header.scrolled .nav-link,
+.header.scrolled .service-section a,
+.header.scrolled .hamburger {
+    color: white; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.nav-menu .nav-item {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.nav-menu .nav-link {
+    color: #007ba7;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-menu .nav-link:hover {
+    color: #007ba7;
+}
+
+/* Hamburger icon */
+.hamburger {
+    border: none;
+    background: transparent;
+    color: #007ba7;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    background: #007ba7;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.sidebar-menu li a:hover {
+    background: #f0f0f0;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Banner */
+.first {
+    background: url('../img/banner/background.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    padding-top: 92px;
+}
+
+.banner {
+    padding: 20px 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.banner h1,
+.contact-info {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner .slogan {
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: red;
+}
+
+.contact-info i {
+    text-align: center;
+}
+
+/* Top-right controls */
+.top-right-controls {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.flag {
+    width: 20px;
+    height: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.search-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-user input {
+    padding: 5px 5px 5px 30px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.search-user i.fa-search {
+    position: absolute;
+    left: 170px;
+    font-size: 18px;
+    color: #666;
+}
+
+.search-user i.fa-user {
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 20px;
+}
+
+/*TIN MỚI */
+.news {
+    margin-top: 280px;
+    padding: 0;
+}
+
+.news-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.news-header h2 {
+    font-size: 30px;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.pagination-line {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.pagination-dash {
+    width: 56px;
+    height: 3px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pagination-dash.active {
+    background: #007ba7;
+}
+
+.mySwiper {
+    width: 100%;
+    height: 150px;
+}
+
+.mySwiper .swiper-slide {
+    text-align: center;
+    width: 33.33%;
+    flex-shrink: 0;
+}
+
+.mySwiper .news-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mySwiper .news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* TIN TỨC và CHÍNH SÁCH */
+.news-section, .policy-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #007ba7;
+    border-left: 8px solid #007ba7;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.newsSwiper, .policySwiper {
+    width: 100%;
+    height: 300px;
+}
+
+.newsSwiper .swiper-slide, .policySwiper .swiper-slide {
+    text-align: left;
+    width: 33.33%;
+    flex-shrink: 0;
+}
+
+.newsSwiper .news-card, .policySwiper .news-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.newsSwiper .news-card img, .policySwiper .news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.newsSwiper .news-card .title, .policySwiper .news-card .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.newsSwiper .news-card .description, .policySwiper .news-card .description {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.newsSwiper .news-card .content-wrapper, .policySwiper .news-card .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.newsSwiper .news-card .description-wrapper, .policySwiper .news-card .description-wrapper {
+    flex-grow: 1;
+}
+
+.newsSwiper .news-card .read-more, .policySwiper .news-card .read-more {
+    font-size: 0.85rem;
+    color: #007ba7;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    text-align: right;
+}
+
+.newsSwiper .news-card .read-more:hover, .policySwiper .news-card .read-more:hover {
+    text-decoration: underline;
+}
+
+.newsSwiper .news-card .date, .policySwiper .news-card .date {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.newsSwiper .news-card .date i, .policySwiper .news-card .date i {
+    margin-right: 5px;
+}
+
+.news-section .pagination-line, .policy-section .pagination-line {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.news-section .pagination-dot, .policy-section .pagination-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.news-section .pagination-dot.active, .policy-section .pagination-dot.active {
+    background: #007ba7;
+}
+
+/*CÓ THỂ BẠN QUAN TÂM*/
+.info-opportunity-section {
+    padding: 50px 0;
+}
+
+.infoOpportunitySwiper {
+    width: 100%;
+    height: 200px;
+}
+
+.infoOpportunitySwiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.infoOpportunitySwiper .info-opportunity-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 5px;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.infoOpportunitySwiper .info-opportunity-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.infoOpportunitySwiper .info-opportunity-card .read-more {
+    font-size: 0.85rem;
+    color: #007ba7;
+    text-decoration: none;
+    display: inline-block;
+    text-align: right;
+}
+
+.infoOpportunitySwiper .info-opportunity-card .read-more:hover {
+    text-decoration: underline;
+}
+
+.info-opportunity-section .pagination-line {
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-opportunity-section .pagination-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.info-opportunity-section .pagination-dot.active {
+    background: #007ba7;
+}
+
+/* MỖI NGÀY MỘT THÔNG TIN */
+.daily-info-section {
+    padding: 50px 0;
+}
+
+.daily-info-background {
+    background: #007ba7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.daily-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.daily-info-header h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.daily-info-header h2 i {
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+.dailyInfoSwiper {
+    width: 100%;
+    height: 200px;
+}
+
+.dailyInfoSwiper .swiper-slide {
+    width: 33.33%;
+}
+
+.daily-info-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.daily-info-card:hover {
+    transform: scale(1.05);
+}
+
+.daily-info-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.daily-info-content {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.daily-info-content h3 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.daily-info-content p {
+    font-size: 0.85rem;
+    color: #007ba7;
+    margin: 0;
+    text-align: right;
+}
+
+.daily-info-section .pagination-line {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.daily-info-section .pagination-dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.daily-info-section .pagination-dot.active {
+    background: yellow;
+}
+/* Thông tin doanh nghiệp và Sidebar */
+.article-image {
+    width: 750px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.article-meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.article-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.main-article-card {
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 605px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.news-sidebar-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: scroll-up 20s linear infinite;
+}
+
+.news-sidebar-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-16.67%); /* Điều chỉnh để phù hợp với chiều cao mới */
+    }
+}
+
+.news-sidebar-item {
+    margin-bottom: 20px;
+}
+
+.news-sidebar-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-sidebar-item h4 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.news-sidebar-item p {
+    font-size: 14px;
+    color: #888;
+}
+/* ĐƠN VỊ HỢP TÁC */
+.partners-section {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.partnersSwiper {
+    width: 100%;
+    height: 120px;
+}
+
+.partnersSwiper .swiper-slide {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.partnersSwiper .partner-card {
+    background: #fff;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partnersSwiper .partner-card img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.partners-section .pagination-line {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+
+.partners-section .pagination-dot.active {
+    background: #007ba7;
+}
+
+@media (max-width: 576px) {
+    .partnersSwiper .partner-card img {
+        max-height: 100px; 
+    }
+}
+/* Footer */
+.footer {
+    background: #007ba7;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Responsive MENU */
+@media (min-width: 992px) {
+    .nav-menu {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+
+    .newsSwiper .news-card,
+    .policySwiper .news-card,
+    .mySwiper .news-card,
+    .dailyInfoSwiper .daily-info-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .newsSwiper .news-card img,
+    .policySwiper .news-card img,
+    .mySwiper .news-card img,
+    .dailyInfoSwiper .daily-info-card img {
+        height: 150px;
+        width: 100%;
+    }
+
+    .infoOpportunitySwiper {
+        height: 250px;
+    }
+
+    .infoOpportunitySwiper .info-opportunity-img {
+        object-fit: cover;
+        height: 120px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .daily-info-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-number {
+        font-size: 2.5rem;
+    }
+
+    .footer-info h3 {
+        font-size: 1rem;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+}
+
+.scroll-to-top-btn {
+    position: fixed;       
+    bottom: 100px;          
+    right: 20px;           
+    background-color: #007ba7; 
+    color: white;         
+    border: none;          
+    padding: 8px 15px;    
+    font-size: 18px;    
+    font-weight: bold;   
+    border-radius: 50px;    
+    display: none;         
+    cursor: pointer;      
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #005f73; 
+}
+
+.call-btn {
+    position: fixed;              
+    bottom: 170px;                 
+    right: 10px;                  
+    background-color: #d30b0b;    
+    color: white;                
+    border: 8px solid rgba(247, 173, 173, 0.8); 
+    padding: 8px 13px;           
+    font-size: 16px;              
+    border-radius: 50%;           
+    display: none;                
+    cursor: pointer;             
+    transition: all 0.3s ease;    
+    z-index: 9998;                
+}
+
+.call-btn:hover {
+    background-color: #cc0000;    
+    transform: scale(1.5);         
+    border: 12px solid rgba(247, 173, 173, 0.8);  
+}
+
+.call-btn:focus {
+    outline: none;                 
+    box-shadow: 0 0 10px rgba(247, 173, 173, 0.8); 
+}
+
+
+@keyframes shake {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.1);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.call-btn.shake {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.call-btn:hover.shake {
+    animation: none; 
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 30px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    border-radius: 50%;       
+    overflow: hidden;         
+    object-fit: cover;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 9999; /* Luôn nổi lên trên */
+}
+
+.chat-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Hộp chat */
+.chat-box {
+    width: 300px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Đảm bảo hộp chat nổi lên */
+}
+
+/* Ẩn hộp chat */
+.hidden {
+    display: none;
+}
+
+/* Header chat */
+.chat-header {
+    background: linear-gradient(to right, #007ba7, #11485d);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Nút đóng chat */
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Nội dung chat */
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+/* Input chat */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background: #007ba7;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    max-width: 90%; 
+    margin: auto;
+    border-radius: 8px;
+    
+}
+.marquee-container strong{
+    color: #cc0000;
+}
+.marquee-wrapper {
+    display: flex;
+    width: 200%; 
+}
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
