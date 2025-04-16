@@ -1029,3 +1029,10 @@ body {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
+.main-article-card .article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    object-fit: cover;  
+}
