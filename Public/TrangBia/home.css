@@ -454,6 +454,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.newsSwiper .news-card:hover,
+.policySwiper .news-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .newsSwiper .news-card img,
@@ -578,6 +584,11 @@ body {
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.infoOpportunitySwiper .info-opportunity-card:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .infoOpportunitySwiper .info-opportunity-img {
